@@ -1,0 +1,14 @@
+{
+  "name": "company-website",
+  "version": "1.0.0",
+  "description": "Starter company website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene Sia <eugene@eugenesia.co.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "react-router-dom": "^4.1.1"
+  }
+}
