@@ -3,8 +3,9 @@ import React from 'react'
 import { render } from 'react-dom'
 
 import {
-    HashRouter,
-    Route
+  HashRouter,
+  Route,
+  Switch
 } from 'react-router-dom'
 
 import {
@@ -12,7 +13,8 @@ import {
   About,
   Events,
   Products,
-  Contact
+  Contact,
+  Whoops404
 } from './pages'
 
 window.React = React
@@ -20,11 +22,15 @@ window.React = React
 render(
   <HashRouter>
     <div className="main">
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/events" component={Events} />
-      <Route path="/products" component={Products} />
-      <Route path="/contact" component={Contact} />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/events" component={Events} />
+        <Route path="/products" component={Products} />
+        <Route path="/contact" component={Contact} />
+        // Render 404 page when no paths match.
+        <Route component={Whoops404} />
+      </Switch>
     </div>
   </HashRouter>,
   document.getElementById('react-container')
